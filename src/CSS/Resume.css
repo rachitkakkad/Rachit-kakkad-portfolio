@@ -1,0 +1,206 @@
+/* ===============================
+   BASE LAYOUT
+================================ */
+
+.resume-section {
+  width: 100%;
+  padding: 60px 1rem;
+  box-sizing: border-box;
+}
+
+.resume-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #0b0b0b;
+  border-radius: 16px;
+  padding: 40px 30px;
+  color: #e5e5e5;
+  box-shadow: 0 0 25px rgba(0, 153, 255, 0.1);
+}
+
+/* ===============================
+   HEADER
+================================ */
+
+.resume-title {
+  font-size: 28px;
+  color: #00b4ff;
+  margin-bottom: 12px;
+}
+
+.resume-subtitle {
+  color: #aaa;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+/* ===============================
+   PROFILE SECTION
+================================ */
+
+.resume-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: rgba(255,255,255,0.03);
+  padding: 24px 20px;
+  border-radius: 12px;
+}
+
+.resume-name {
+  font-size: 24px;
+  color: #00b4ff;
+  margin-bottom: 4px;
+}
+
+.resume-role {
+  color: #ccc;
+  margin: 6px 0;
+}
+
+.resume-meta {
+  color: #aaa;
+  font-size: 14px;
+  margin: 2px 0;
+}
+
+/* Summary box */
+.resume-summary {
+  max-width: 520px;
+  font-size: 14px;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #00b4ff22, #0b0b0b);
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.resume-summary strong {
+  color: #00b4ff;
+}
+
+/* ===============================
+   CONTENT BLOCKS
+================================ */
+
+.resume-section-block {
+  margin-top: 40px;
+  border-radius: 12px;
+  padding: 20px 24px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.resume-section-block h4 {
+  font-size: 20px;
+  color: #00b4ff;
+  margin-bottom: 12px;
+}
+
+.resume-section-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.resume-section-block li span {
+  color: #aaa;
+}
+
+/* ===============================
+   SKILLS
+================================ */
+
+.resume-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.resume-skill {
+  background: rgba(255,255,255,0.05);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* ===============================
+   PDF VIEWER
+================================ */
+
+.resume-pdf {
+  margin-top: 50px;
+}
+
+.resume-frame {
+  width: 100%;
+  height: 650px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: #111;
+  border-radius: 12px;
+}
+
+/* ===============================
+   DOWNLOAD BUTTON
+================================ */
+
+.resume-download {
+  display: inline-block;
+  margin-top: 20px;
+  background: #00b4ff;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+  .resume-section {
+    padding: 40px 1rem;
+  }
+
+  .resume-card {
+    padding: 24px 16px;
+    max-width: 100%;
+  }
+
+  .resume-profile {
+    flex-direction: column;
+  }
+
+  .resume-summary {
+    max-width: 100%;
+  }
+
+  .resume-title {
+    font-size: 24px;
+  }
+
+  .resume-frame {
+    height: 420px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-section {
+    padding: 30px 0.8rem;
+  }
+
+  .resume-title {
+    font-size: 22px;
+  }
+
+  .resume-frame {
+    height: 360px;
+  }
+}

@@ -1,0 +1,242 @@
+:root {
+  --accent: #00b4ff;
+  --muted: #aaa;
+}
+
+/* =========================
+   NAVBAR CONTAINER
+========================= */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.75rem 2rem;
+  width: 100%;
+
+  /* 🔥 Transparent by default (Home hero) */
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom: none;
+
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease, border 0.3s ease;
+}
+
+/* 🔥 Glass effect when scrolling */
+.nav.scrolled {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* =========================
+   LEFT SECTION
+========================= */
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  flex-shrink: 0;
+}
+
+.nav-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(0, 180, 255, 0.6));
+}
+
+.nav-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.nav-name h1 {
+  margin: 0;
+  font-size: 14px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.nav-tagline {
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* =========================
+   DESKTOP NAV LINKS
+========================= */
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  min-width: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.nav-link-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Active text */
+.nav-link-content span.active {
+  color: var(--accent);
+}
+
+/* Remove unwanted backgrounds */
+.nav-link,
+.nav-link-content,
+.nav-link-content span {
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+/* Underline animation */
+.underline {
+  width: 70%;
+  height: 2px;
+  margin-top: 4px;
+  border-radius: 1px;
+  background-color: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+}
+
+/* =========================
+   HAMBURGER BUTTON
+========================= */
+
+.mobile-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+
+  flex-shrink: 0;
+  z-index: 9999;
+}
+
+/* =========================
+   MOBILE OVERLAY
+========================= */
+
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* =========================
+   MOBILE DROPDOWN
+========================= */
+
+.mobile-dropdown {
+  width: 100%;
+  max-width: 420px;
+  margin-top: calc(4rem + env(safe-area-inset-top));
+
+  background: rgba(0, 0, 0, 0.95);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* =========================
+   MOBILE LINKS
+========================= */
+
+.mobile-link {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.2s ease;
+}
+
+.mobile-link:hover {
+  background: rgba(0, 180, 255, 0.1);
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+  .nav {
+    padding: 0.7rem 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 0.65rem 1.2rem;
+  }
+
+  .nav-name h1 {
+    font-size: 12px;
+  }
+
+  .nav-tagline {
+    font-size: 10px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+/* =========================
+   SMALL MOBILE (FLAGSHIP SAFE)
+========================= */
+
+@media (max-width: 480px) {
+  .nav-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .mobile-btn {
+    font-size: 1.6rem;
+  }
+}
